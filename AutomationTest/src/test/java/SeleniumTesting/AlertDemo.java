@@ -9,9 +9,10 @@ public class AlertDemo {
 
 	public static void main(String[] args) throws InterruptedException {
 		String baseUrl = "http://demo.guru99.com/test/delete_customer.php";
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\edatraj\\Desktop\\chromedriver.exe"); //Setting path of Chrome driver
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\edatraj\\Desktop\\Automation Training_Selenium_CoreJava\\chromedriver.exe"); //Setting path of Chrome driver
 		WebDriver driver=new ChromeDriver();//Invoke browser
-	
+		String expectedTitle = ("Do you really want to delete the Customer?");
+		//String alertMessage= "";
 	driver.get(baseUrl);  
 
 		
@@ -34,12 +35,20 @@ public class AlertDemo {
         Thread.sleep(5000);
         		
         // Accepting alert		
-       // alert.accept();		
+        alert.accept();		
         Thread.sleep(5000);
         // Dismiss alert
-        alert.dismiss();
+       // alert.dismiss();
         Thread.sleep(2000);
+        
+        if (alertMessage.contentEquals(expectedTitle)){
+            System.out.println("Test Passed!");
+		}
+         else {
+            System.out.println("Test Failed");
+            
+            
         driver.close();
 	}
-
+	}
 }

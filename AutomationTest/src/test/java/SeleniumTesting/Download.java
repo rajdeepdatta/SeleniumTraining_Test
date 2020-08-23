@@ -1,7 +1,5 @@
 package SeleniumTesting;
 
-import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +17,7 @@ public class Download {
 	                String sourceLocation = downloadButton.getAttribute("href");
 	                String wget_command = "cmd /c C:\\Wget\\wget.exe -P D: --no-check-certificate " + sourceLocation;
 
-	               
+	               System.out.println(sourceLocation);
 	                driver.close();
 	                }
 	                
