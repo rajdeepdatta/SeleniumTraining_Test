@@ -1,0 +1,20 @@
+Language: 
+Core Java , Python
+
+SCM:
+Github
+
+IDE:
+
+Eclipse(Neon,Oxygen), IntelliJ
+
+COnfiguration:
+
+Set java path,install java
+
+Build Tool:
+Maven
+
+Testing
+Selenium WebDriver (automation)
+TestNG

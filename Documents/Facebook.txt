@@ -1,0 +1,39 @@
+package FacebookTest;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class OpenFacebook {
+
+	public static void main(String[] args) throws InterruptedException {
+		// Decide which Browser to Work with
+		//System.setProperty("webdriver.gecko.driver","C:\\Users\\edatraj\\Downloads\\geckodriver-v0.26.0-win64\\geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\edatraj\\Downloads\\chromedriver_win32 (5)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();// Invoke a browser
+		//WebDriver driver = new FirefoxDriver();
+		driver.manage().window().maximize();//Maximize
+		driver.get("https://www.facebook.com");// Open the URL
+		driver.getTitle();
+		System.out.println("The Title is : " + driver.getTitle()); // Print the title
+		System.out.println("The Current URL is : "  + driver.getCurrentUrl());//Print URL name
+		driver.findElement(By.name("firstname")).sendKeys("RAHUL");
+		driver.findElement(By.name("lastname")).sendKeys("Sharma");
+		driver.findElement(By.id("u_0_6")).click();
+		Thread.sleep(4000);
+		driver.findElement(By.id("u_0_8")).click();
+		//driver.findElement(By.xpath("//*[@id='u_0_8']")).click();
+		Thread.sleep(4000);
+		driver.findElement(By.id("u_0_7")).click();
+		Thread.sleep(4000);
+		driver.findElement(By.id("u_0_13")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id='blueBarDOMInspector']/div/div/div/div[1]/h1/a")).click();
+		//driver.findElement(By.id("email")).sendKeys("raj@gmail.com");
+		//driver.findElement(By.name("pass")).sendKeys("Test@12345");
+		//driver.findElement(By.id("u_0_b")).click();
+		Thread.sleep(4000);
+		driver.close();
+	}
+
+}

@@ -1,0 +1,19 @@
+
+//div[text()='Node Details']
+//span[@class='elLayouts-MultiSlidingPanels-close-right']//i[@title='close']
+//button[text()='Remove Selected']
+//a[@title='Launch Software and Hardware Manager (SHM)']
+//span[text()='Continue']
+//a[contains(text(),'Software Administration')]
+//i[@class='ebIcon ebIcon_upArrowLarge']
+xpath=(//button[@class='ebSelect-header'])[2]    (for array robot takes 1 counter more than that in inspect element console)
+
+
+//a[@title='Our Passion']
+
+//(span[@class='wsb-navigation-rendered-top-level-menu'])[1];
+
+
+
+
+ 
